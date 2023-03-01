@@ -1,18 +1,26 @@
 import { Outlet, Link } from "react-router-dom";
 import { Fragment, useContext } from "react";
-import "./navigation.styles.scss";
+
+import CartIcon from '../../components/cart-icon/cart-icon.component';
+import CartDropdown from '../../components/cart-dropdown/cart-dropdown.component';
+
 import { UserContext } from '../../contexts/user.context';
+import { CartContext } from '../../contexts/cart.context';
+
 import { signOutUser } from '../../utils/firebase/firebase.utils.js';
+import { RiVipCrownLine } from 'react-icons/ri';
+
+import "./navigation.styles.scss";
 
 const Navigation = () => {
   const { currentUser } = useContext(UserContext);
+  const { isCartOpen } = useContext(CartContext)
 
   return (
     <Fragment>
       <div className="navigation">
         <Link className="logo-container" to="/">
-          <img
-            src="https://i.fbcd.co/products/original/609238945a7a5d2de91475b56f37ad5123f42540bc0d2c7368594f77a3dba53a.jpg"
+          <RiVipCrownLine
             alt="Crown-Logo"
             className="logo"
           />
@@ -30,7 +38,9 @@ const Navigation = () => {
                 </Link>
             )
           }
+          <CartIcon />
         </div>
+        {isCartOpen && <CartDropdown /> }
       </div>
       <Outlet />
     </Fragment>
