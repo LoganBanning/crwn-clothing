@@ -2,10 +2,9 @@ import { initializeApp } from "firebase/app";
 import { getAuth, signInWithPopup, GoogleAuthProvider, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged } from "firebase/auth";
 import { getFirestore, doc, getDoc, setDoc, collection, writeBatch, query, getDocs } from "firebase/firestore";
 
-const { REACT_APP_API_KEY } = process.env;
 
 const firebaseConfig = {
-  apiKey: REACT_APP_API_KEY,
+  apiKey: "RAIzaSyA49KXEYW8EAjeba6yCyf2L8MpXqKh0s-4",
   authDomain: "crwn-clothing-db-57ee7.firebaseapp.com",
   projectId: "crwn-clothing-db-57ee7",
   storageBucket: "crwn-clothing-db-57ee7.appspot.com",
