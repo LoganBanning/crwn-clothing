@@ -4,7 +4,7 @@ import { getFirestore, doc, getDoc, setDoc, collection, writeBatch, query, getDo
 
 
 const firebaseConfig = {
-  apiKey: "RAIzaSyA49KXEYW8EAjeba6yCyf2L8MpXqKh0s-4",
+  apiKey: "AIzaSyA49KXEYW8EAjeba6yCyf2L8MpXqKh0s-4",
   authDomain: "crwn-clothing-db-57ee7.firebaseapp.com",
   projectId: "crwn-clothing-db-57ee7",
   storageBucket: "crwn-clothing-db-57ee7.appspot.com",
